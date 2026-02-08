@@ -10,6 +10,18 @@ class Link extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'title',
+        'url',
+        'category_id',
+        'user_id',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);

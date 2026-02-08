@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <title>Liens | ATLAS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
 
-<body class="bg-[#0B0F1A] min-h-screen text-white">
-    <div class="container mx-auto px-4 py-8">
+@extends('layouts.app')
+
+@section('title', 'Liens | ATLAS')
+
+@section('content')
+    <div>
         <!-- Header avec recherche -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
             <div class="flex items-center gap-4">
@@ -79,7 +76,7 @@
                             <div class="flex-1">
                                 <div class="flex items-center gap-3">
                                     <h3 class="text-xl font-semibold text-purple-300">{{ $link->title }}</h3>
-                                    <span class="px-2 py-1 rounded-lg bg-blue-500/20 text-blue-300 text-xs">
+                                    <span class="px-2 py-1 rounded-lg bg-green-500/20 text-green-300 text-xs">
                                         {{ $link->category->name }}
                                     </span>
                                 </div>
@@ -140,6 +137,5 @@
             </div>
         @endif
     </div>
-</body>
-</html>
+@endsection
 
